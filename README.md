@@ -88,6 +88,9 @@ IonDTN Setup is now complete. Click on the button to leave setup and you will be
 ### Forming the test topology
 The topology for our test is as follow:
 <img src = "./resources/topology_hello_world.png">
+
+
+
 To form the test topology as described above:
 - Run the IonDTN provider application using modified android_node.rc
 - Run an Ion instance on the machine using the modified pc_node.rc. Run this command:
@@ -96,7 +99,7 @@ To form the test topology as described above:
    - IonDTN provider application log:
         <img src = "./resources/IonDTN_log.png">
     - Ion instance ion.log:
-        [<img src = "./resources/terminal_log">
+        [<img src = "./resources/terminal_log.png">
 > In this context 192.168.1.2 is machine ip and 192.168.1.26 is the ip of the android device.
 
 ### Testing the application
@@ -119,7 +122,7 @@ To form the test topology as described above:
 
     ***Note: You have an option to use ```ipn:1.1``` or ```ipn:1.2``` as a sink-EID but it needs to be same on both PC and android device for sucessfull data transmission.***
     
-##### Congratulations IonDTNSimpleAndroidApp is complete.
+#### Congratulations IonDTNSimpleAndroidApp is complete!
 
 
 
