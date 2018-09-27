@@ -20,7 +20,7 @@ Go to that location and there will be a folder called "ndk-bundle". Replace the 
 ## Steps to deploy the application
 ### IonDTN Installation
 - Open the IonDTN project located in arch_android directory of the ION-DTN archive in Android Studio. Due to Android Studio's feature detection, it will ask you for permission to install all required SDKs and NDKs. Please install all these packages, connect your Android device and then proceed by pressing the Run 'app' icon in the toolbar:
-[img1]
+<img src = "./resources/run_app.png">
 Android Studio will build the app, install it on your device and open it.
 You should be greeted by the following screen of the application setup:
 [img2]
