@@ -126,7 +126,7 @@ To form the test topology as described above:
 [NDK]: https://developer.android.com/ndk/downloads/older_releases
 [ion-dtn]: https://sourceforge.net/projects/ion-dtn/files/
 [android_node.rc]: ./resources/code/android_node.rc
-[pc_node]:./resources/code/android_node.rc
+[pc_node]:./resources/code/pc_node.rc
 [img8]:<img src="./resources/run_app.png">
 [img9]:<img src="./resources/run_app.png">
 [img10]:./resources/run_app.png
