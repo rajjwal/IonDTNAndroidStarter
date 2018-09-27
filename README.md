@@ -125,15 +125,9 @@ To form the test topology as described above:
 [Android Studio]: https://developer.android.com/studio/
 [NDK]: https://developer.android.com/ndk/downloads/older_releases
 [ion-dtn]: https://sourceforge.net/projects/ion-dtn/files/
-[img1]:./resources/run_app.png
-[img2]:<img src="./resources/ion_dtn_setup_welcome.png">
-[img3]:<img src="./resources/ion_dtn_setup_node_number.png">
-[img4]:<img src="./resources/ion_dtn_setup_init_selection.png">
-[img5]:<img src="./resources/ion_dtn_setup_select_path.png">
-[img6]:<img src="./resources/ion_dtn_setup_complete.png">
-[img7]:<img src="./resources/ion_dtn_status_fragment.png">
+[android_node.rc]: ./resources/code/android_node.rc
+[pc_node]:./resources/code/android_node.rc
 [img8]:<img src="./resources/run_app.png">
 [img9]:<img src="./resources/run_app.png">
 [img10]:./resources/run_app.png
-[img1`]:./resources/run_app.png
-
+[img11]:./resources/run_app.png
