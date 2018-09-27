@@ -6,7 +6,7 @@ A starting point for user to get started with android development using IonDTN (
 - Download and Install Interplanetary Overlay Network (ION) software distribution pre-installed in the development machine. Download the following files from [ion-dtn].
     - Download "ion-3.6.1.tar.gz" and extract contents to *<path>*
     - Download "ion-android-3.6.1.tar.gz" and extract the contents of folder "ion-android-3.6.1" to *<path>/ion-3.6.1/arch-android*
-- go to *<path>* and run *./configure*. If you are on macOS you will need to make some changes by running follwowing commands:
+- go to *<path>* and run *./configure*. If you are on macOS you will need to make some changes by running following commands:
     - 	sudo sysctl -w kern.sysv.shmmax=10485760
     - 	sudo sysctl -w kern.sysv.shmseg=32
     - 	sudo sysctl -w kern.sysv.shmall=32768 
@@ -80,7 +80,7 @@ Just choose "1" in order to ensure compatibility with the configuration file use
 - After pressing the arrow button, you have to select one of the two setup options:
 <img src="./resources/ion_dtn_setup_init_selection.png">
 
-- For our "Hello World" project, please choose "Setup configuration based on file" and proceed by taping on the arrow button.
+- For our project, please choose "Setup configuration based on file" and proceed by taping on the arrow button.
 
 - Depending on the Android version of your device and your security settings, you might be asked to give IonDTN the permission to access the devices external memory (which is the the memory that is accessible by the user and all other applications). Grant the permission and tap the arrow button to proceed.
 <img src="./resources/ion_dtn_setup_select_path.png">
@@ -103,6 +103,7 @@ The topology for our test is as follows:
 To form the test topology as described above:
 - Run the IonDTN provider application using modified android_node.rc
 - Run an Ion instance on the machine using the modified pc_node.rc. Run this command:
+
     ```ionstart -I <path to the modified pc_node.rc>```
 
 
@@ -118,16 +119,19 @@ To form the test topology as described above:
 > In this context 192.168.1.2 is machine ip and 192.168.1.26 is the ip of the android device.
 
 ### Testing the application
-> Please make sure to start the IonDTN before continuing in order to use it with IonDTNSimpleAndroidApp.
-> Coming to this section means you have succesfully deployed the testing topology.
+> **Please make sure to start the IonDTN before continuing in order to use it with IonDTNSimpleAndroidApp.**
+> **Coming to this section means you have succesfully deployed the testing topology.**
+
 ##### Sending bundles from node 1 to node 2:
-- Open the **IonDTNSimpleAndroidApp** located at source directory using Android Studio. if it asks you for permission to install all required SDKs and NDKs, please install those packages. Run the app in your android device.
-- run ```bpsink ipn:2.2``` on the terminal. Your PC (node 2) will begin listening on the sink-EID with the endpoint_number 2 on service_number 2.
+- Open the **IonDTNSimpleAndroidApp** located at source directory using Android Studio. If it asks you for permission to install all required SDKs and NDKs, please install those packages. Run the app in your android device.
+- Run ```bpsink ipn:2.2``` on the terminal. Your PC (node 2) will begin listening on the sink-EID with the endpoint_number 2 on service_number 2.
 - In the running application, in the section Sending to, type in ```ipn:2.2``` as you did in terminal. Press send. You should be able to see the timestamp of android device (node 1) on the terminal like this:
 
 <img src = "./resources/terminal_output.png">
 
 > Note: You have an option to use ```ipn:2.1``` or ```ipn:2.2``` as a sink-EID but it needs to be same on both PC and android device for sucessfull data transmission.
+
+
 
 ##### Sending bundles from node 2 to node 1:
 - Go to the running application, in the section Receiving at, type in ```ipn:1.2```. Your PC (node 1) will begin listening on the sink-EID with the endpoint_number 1 on service_number 2.
