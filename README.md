@@ -87,16 +87,17 @@ IonDTN Setup is now complete. Click on the button to leave setup and you will be
 
 ### Forming the test topology
 The topology for our test is as follow:
-[topology]
+<img src = "./resources/topology_hello_world.png">
 To form the test topology as described above:
 - Run the IonDTN provider application using modified android_node.rc
 - Run an Ion instance on the machine using the modified pc_node.rc. Run this command:
     ```ionstart -I <path to the modified pc_node.rc>```
 **Look for the log message like below in log output of IonDTN provider application and ion.log file at the path where you started Ion instance in machine. Only this will ensure that toplogy has been successfully constructed.**
    - IonDTN provider application log:
-        [log1][log2][log3]
+        <img src = "./resources/IonDTN_log.png">
     - Ion instance ion.log:
-        [log4][log5][log6]
+        [<img src = "./resources/terminal_log">
+> In this context 192.168.1.2 is machine ip and 192.168.1.26 is the ip of the android device.
 
 ### Testing the application
 > Please make sure to start the IonDTN before continuing in order to use it with IonDTNSimpleAndroidApp.
@@ -105,14 +106,16 @@ To form the test topology as described above:
 - Open the **IonDTNSimpleAndroidApp** located at source directory using Android Studio. if it asks you for permission to install all required SDKs and NDKs, please install those packages. Run the app in your android device.
 - run ```bpsink ipn:2.2``` on the terminal. Your PC (node 2) will begin listening on the sink-EID with the endpoint_number 2 on service_number 2.
 - In the running application, in the section Sending to, type in ```ipn:2.2``` as you did in terminal. Press send. You should be able to see the timestamp of android device (node 1) on the terminal like this:
-[img8][img9]
+
+<img src = "./resources/terminal_output.png">
 
     ***Note: You have an option to use ```ipn:2.1``` or ```ipn:2.2``` as a sink-EID but it needs to be same on both PC and android device for sucessfull data transmission.***
 
 ##### Sending bundles from node 2 to node 1:
 - Go to the running application, in the section Receiving at, type in ```ipn:1.2```. Your PC (node 1) will begin listening on the sink-EID with the endpoint_number 1 on service_number 2.
 - Open another terminal and run ```echo `date` | bpsource ipn:1.2```. You should be able to see the timestamp of PC (node 2) on the terminal like this:
-[img10][img11]
+
+<img src = "./resources/application_output.png">
 
     ***Note: You have an option to use ```ipn:1.1``` or ```ipn:1.2``` as a sink-EID but it needs to be same on both PC and android device for sucessfull data transmission.***
     
@@ -127,7 +130,3 @@ To form the test topology as described above:
 [ion-dtn]: https://sourceforge.net/projects/ion-dtn/files/
 [android_node.rc]: ./resources/code/android_node.rc
 [pc_node.rc]: ./resources/code/pc_node.rc
-[img8]:<img src="./resources/run_app.png">
-[img9]:<img src="./resources/run_app.png">
-[img10]:./resources/run_app.png
-[img11]:./resources/run_app.png
