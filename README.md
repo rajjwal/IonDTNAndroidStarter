@@ -1,5 +1,7 @@
-## IonDTNAndroidStarter
+# IonDTNAndroidStarter
 A starting point for user to get started with android development using IonDTN (A DTN provider application for Android)
+
+
 
 ## Requirements
 - Linux-based machine
@@ -19,8 +21,12 @@ A starting point for user to get started with android development using IonDTN (
 
 Go to that location and there will be a folder called "ndk-bundle". Replace the contents of this folder with the extracted content of the older version of NDK which you just downloaded.
 
+
+
 ## Steps to deploy the application
+
 ### IonDTN Installation
+
 - Open the IonDTN project located in arch_android directory of the ION-DTN archive in Android Studio. Due to Android Studio's feature detection, it will ask you for permission to install all required SDKs and NDKs. Please install all these packages, connect your Android device and then proceed by pressing the Run 'app' icon in the toolbar:
 <img src = "./resources/run_app.png">
 Android Studio will build the app, install it on your device and open it.
@@ -142,9 +148,7 @@ To form the test topology as described above:
 
 > Note: You have an option to use ```ipn:1.1``` or ```ipn:1.2``` as a sink-EID but it needs to be same on both PC and android device for sucessfull data transmission.
     
-#### Congratulations IonDTNSimpleAndroidApp is complete!
-
-
+## Congratulations IonDTNSimpleAndroidApp is complete!
 
 
 
