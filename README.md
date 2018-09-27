@@ -128,7 +128,7 @@ To form the test topology as described above:
 > **Please make sure to start the IonDTN before continuing in order to use it with IonDTNSimpleAndroidApp.**
 > **Coming to this section means you have succesfully deployed the testing topology.**
 
-##### Sending bundles from node 1 to node 2:
+#### Sending bundles from node 1 to node 2:
 - Open the **IonDTNSimpleAndroidApp** located at source directory using Android Studio. If it asks you for permission to install all required SDKs and NDKs, please install those packages. Run the app in your android device.
 - Run ```bpsink ipn:2.2``` on the terminal. Your PC (node 2) will begin listening on the sink-EID with the endpoint_number 2 on service_number 2.
 - In the running application, in the section Sending to, type in ```ipn:2.2``` as you did in terminal. Press send. You should be able to see the timestamp of android device (node 1) on the terminal like this:
@@ -139,7 +139,7 @@ To form the test topology as described above:
 
 
 
-##### Sending bundles from node 2 to node 1:
+#### Sending bundles from node 2 to node 1:
 - Go to the running application, in the section Receiving at, type in ```ipn:1.2```. Your PC (node 1) will begin listening on the sink-EID with the endpoint_number 1 on service_number 2.
 
 - Open another terminal and run ```echo `date` | bpsource ipn:1.2```. You should be able to see the timestamp of PC (node 2) on the terminal like this:
