@@ -14,7 +14,9 @@ A starting point for user to get started with android development using IonDTN (
 - Finally, run *sudo make install* to install the packages.
 - Download and install [Android Studio].
 - Download and unzip the working, older version of [NDK]. Android NDK, Revision 17c (June 2018) has been working fine. Find your own local Android SDK location; you can check the location of the SDK directory itself via
-*Android Studio -> Preferences... -> Appearance & Behavior -> System Settings -> Android SDK -> Android SDK Location* field near the top of the panel. 
+
+*Android Studio -> Preferences... -> Appearance & Behavior -> System Settings -> Android SDK -> Android SDK Location* field near the top of the panel.
+
 Go to that location and there will be a folder called "ndk-bundle". Replace the contents of this folder with the extracted content of the older version of NDK which you just downloaded.
 
 ## Steps to deploy the application
@@ -82,12 +84,14 @@ Just choose "1" in order to ensure compatibility with the configuration file use
 
 - Depending on the Android version of your device and your security settings, you might be asked to give IonDTN the permission to access the devices external memory (which is the the memory that is accessible by the user and all other applications). Grant the permission and tap the arrow button to proceed.
 <img src="./resources/ion_dtn_setup_select_path.png">
+
 - In the upcoming dialog you have to select an appropriate configuration file. For the purpose of our project, select the modified android_node.rc.
 
 - If the setup succeeded (i.e. the configuration file was consistent), you will see the following screen:
 <img src="./resources/ion_dtn_setup_complete.png">
 
 IonDTN Setup is now complete. Click on the button to leave setup and you will be redirected to the main status screen of the application.
+
 <img src="./resources/ion_dtn_status_fragment.png">
 
 ### Forming the test topology
