@@ -74,19 +74,24 @@ Now we have to configure the app and the underlying ION-DTN instance.
 - First, we have to select a node number:
 <img src="./resources/ion_dtn_setup_node_number.png">
 Just choose "1" in order to ensure compatibility with the configuration file used in all subsequent steps.
+
 - After pressing the arrow button, you have to select one of the two setup options:
 <img src="./resources/ion_dtn_setup_init_selection.png">
-For our "Hello World" project, please choose "Setup configuration based on file" and proceed by taping on the arrow button.
+
+- For our "Hello World" project, please choose "Setup configuration based on file" and proceed by taping on the arrow button.
+
 - Depending on the Android version of your device and your security settings, you might be asked to give IonDTN the permission to access the devices external memory (which is the the memory that is accessible by the user and all other applications). Grant the permission and tap the arrow button to proceed.
 <img src="./resources/ion_dtn_setup_select_path.png">
 - In the upcoming dialog you have to select an appropriate configuration file. For the purpose of our project, select the modified android_node.rc.
+
 - If the setup succeeded (i.e. the configuration file was consistent), you will see the following screen:
 <img src="./resources/ion_dtn_setup_complete.png">
+
 IonDTN Setup is now complete. Click on the button to leave setup and you will be redirected to the main status screen of the application.
 <img src="./resources/ion_dtn_status_fragment.png">
 
 ### Forming the test topology
-The topology for our test is as follow:
+The topology for our test is as follows:
 <img src = "./resources/topology_hello_world.png">
 
 
@@ -95,11 +100,17 @@ To form the test topology as described above:
 - Run the IonDTN provider application using modified android_node.rc
 - Run an Ion instance on the machine using the modified pc_node.rc. Run this command:
     ```ionstart -I <path to the modified pc_node.rc>```
-**Look for the log message like below in log output of IonDTN provider application and ion.log file at the path where you started Ion instance in machine. Only this will ensure that toplogy has been successfully constructed.**
+
+
+> **Look for the log message like below in log output of IonDTN provider application and ion.log file at the path where you started Ion instance in machine. Only this will ensure that toplogy has been successfully constructed.**
    - IonDTN provider application log:
-        <img src = "./resources/IonDTN_log.png">
-    - Ion instance ion.log:
-        [<img src = "./resources/terminal_log.png">
+
+   <img src= "./resources/IonDTN_log.png">
+
+   - Ion instance ion.log:
+
+   <img src = "./resources/terminal_log.png">
+
 > In this context 192.168.1.2 is machine ip and 192.168.1.26 is the ip of the android device.
 
 ### Testing the application
@@ -112,15 +123,16 @@ To form the test topology as described above:
 
 <img src = "./resources/terminal_output.png">
 
-    ***Note: You have an option to use ```ipn:2.1``` or ```ipn:2.2``` as a sink-EID but it needs to be same on both PC and android device for sucessfull data transmission.***
+> Note: You have an option to use ```ipn:2.1``` or ```ipn:2.2``` as a sink-EID but it needs to be same on both PC and android device for sucessfull data transmission.
 
 ##### Sending bundles from node 2 to node 1:
 - Go to the running application, in the section Receiving at, type in ```ipn:1.2```. Your PC (node 1) will begin listening on the sink-EID with the endpoint_number 1 on service_number 2.
+
 - Open another terminal and run ```echo `date` | bpsource ipn:1.2```. You should be able to see the timestamp of PC (node 2) on the terminal like this:
 
 <img src = "./resources/application_output.png">
 
-    ***Note: You have an option to use ```ipn:1.1``` or ```ipn:1.2``` as a sink-EID but it needs to be same on both PC and android device for sucessfull data transmission.***
+> Note: You have an option to use ```ipn:1.1``` or ```ipn:1.2``` as a sink-EID but it needs to be same on both PC and android device for sucessfull data transmission.
     
 #### Congratulations IonDTNSimpleAndroidApp is complete!
 
